@@ -1,0 +1,14 @@
+repos:
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.10
+    hooks:
+    -   id: ruff-check
+        name: ruff (Linter)
+        args: [--fix, --exit-non-zero-on-fix, --show-fixes]
+        types_or: [python]
+        # --fix: 自动修复可修复的 linting 问题。
+        # --exit-non-zero-on-fix: 如果 ruff 进行了自动修复，钩子会失败。
+        # --show-fixes: 在输出中显示 ruff 进行了哪些修复。
+    -   id: ruff-format
+        name: ruff-format (Formatter)
+        args: []
